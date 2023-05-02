@@ -1,0 +1,22 @@
+.image-dimension {
+    height: 10rem;
+    object-fit: scale-down;
+    object-position: center;
+}
+
+.nav-tabs .nav-item .nav-link {
+    background-color: grey;
+    color: #FFF;
+  }
+
+  .nav-tabs .nav-item .nav-link.active {
+    background-color: black;
+    color: white;
+  }
+
+  /* new project preview image to upload */
+  .create-img-dimension{
+    height: 12rem;
+    width: 8rem;
+    object-fit: contain;
+  }

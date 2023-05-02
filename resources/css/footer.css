@@ -1,0 +1,9 @@
+.custom-footer-menu {
+    color: rgba(255, 255, 255, 0.615);
+    text-decoration:none;
+}
+
+.custom-footer-menu:hover {
+    color: rgb(255, 255, 255);
+    text-decoration:none;
+}

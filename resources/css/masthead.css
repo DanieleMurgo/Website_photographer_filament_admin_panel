@@ -1,0 +1,13 @@
+.masthead {
+    margin-top: 60px;
+    height: 100vh;
+    min-height: 500px;
+    background-image: url('../img/FS-Logo.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  #ledeff-masthead {
+    background-image: url('https://picsum.photos/950/470');
+  }

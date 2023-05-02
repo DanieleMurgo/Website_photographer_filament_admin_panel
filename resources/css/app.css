@@ -1,0 +1,15 @@
+@import "bootstrap/dist/css/bootstrap.min.css";
+@import url(//fonts.googleapis.com/css?family=Montserrat:300,500);
+@import url("https://fonts.googleapis.com/css?family=Gelasio&display=swap");
+@import 'masthead.css';
+@import 'footer.css';
+@import 'navbar.css';
+@import 'swiper.css';
+@import 'team.css';
+@import 'header.css';
+@import 'button.css';
+@import 'admin.css';
+@import 'scrollTextHome.css';
+@import 'accordion.css';
+@import 'videos.css'
+

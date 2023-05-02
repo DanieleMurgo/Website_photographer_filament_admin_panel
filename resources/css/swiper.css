@@ -1,0 +1,86 @@
+/* Swiper show page */
+
+.swiper {
+  width: 100%;
+  max-height: 72vh;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mySwiper2 {
+  width: 100%;
+}
+
+.mySwiper {
+  height: 16rem;
+  box-sizing: border-box;
+  padding: 10px 0;
+}
+
+.mySwiper .swiper-slide {
+  width: 25%;
+  height: 100%;
+  opacity: 0.4;
+  cursor:pointer;
+}
+
+.mySwiper .swiper-slide-thumb-active {
+  opacity: 1;
+}
+
+.swiper-slide img {
+  max-width: 100%;
+  height: 100%;
+  object-fit:contain;
+}
+
+@media only screen and (max-width: 600px) {
+  .swiper-slide img {
+    height: 18rem;
+  }
+}
+
+
+/* Swiper all projects page */
+.mySwiper-pjs {
+  height: 8rem;
+  box-sizing: border-box;
+}
+
+.swiper-pagination {
+  position:inherit;
+}
+
+.swiper-all-pj-height{
+  max-height: 150px;
+  object-fit: contain;
+}
+
+
+/* Swiperwelcome images */
+.swiper-welcome-img {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  height: 100%;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-preview-dimension {
+  width: 200px;
+  height: 270px;
+}
+
+
+/* Swiper end page Welcome */
+.mySwiperEndWelcome {
+  width: 100%;
+  height: 20rem;
+}

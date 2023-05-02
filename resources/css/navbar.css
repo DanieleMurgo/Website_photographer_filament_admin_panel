@@ -1,0 +1,28 @@
+nav {
+transition: 0.4s;
+}
+
+
+.height-nav {
+    height: 60px;
+}
+
+.mt-nav {
+    margin-top:70px;
+}
+
+#logout {
+    border:0px;
+}
+
+.nav-link:hover, #logout:hover {
+    transition: 0.4s;
+    border-bottom: 2px solid white ;
+    }    
+    
+@media only screen and (max-width: 600px) {
+.bg-collapse-nav {
+    padding: 0px 8px;
+    background-color: rgb(27, 26, 26);
+}
+}
