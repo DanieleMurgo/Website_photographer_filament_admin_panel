@@ -2,8 +2,52 @@
     @csrf
     <div class="container">
         <div class="row">
+
+            <div class="col-12 col-md-6 mb-5">
+                <label class="form-label fs-3 mt-3">Title</label>
+                <input wire:model="name" type="text" class="form-control @error('name') is-invalid @enderror">
+                @error('name')
+                <div class="text-danger mt-2">{{ $message }}</div>
+                @enderror
+            </div>
+            <div class="col-12 col-md-6 mb-5">
+                <label class="form-label fs-3 mt-3">Client</label>
+                <input wire:model="client" type="text" class="form-control @error('client') is-invalid @enderror">
+                @error('client')
+                <div class="text-danger mt-2">{{ $message }}</div>
+                @enderror
+            </div>
+            <div class="col-12 col-md-6 mb-5">
+                <label class="form-label fs-3 mt-3">Advertorial on</label>
+                <input wire:model="advertorial_on" type="text"
+                    class="form-control @error('advertorialOn') is-invalid @enderror">
+                @error('advertorialOn')
+                <div class="text-danger mt-2">{{ $message }}</div>
+                @enderror
+            </div>
+            <div class="col-12 col-md-6 mb-5">
+                <label class="form-label fs-3 mt-3">Year</label>
+                <input wire:model="year" type="number" step="1" class="form-control @error('year') is-invalid @enderror"
+                    placeholder="es. 2023">
+                @error('year')
+                <div class="text-danger mt-2">{{ $message }}</div>
+                @enderror
+            </div>
+            <div class="mb-5">
+                <label class="form-label fs-3">Description</label>
+                <textarea wire:model="description" class="form-control @error('description') is-invalid @enderror"
+                    cols="30" rows="10"></textarea>
+                @error('description')
+                <div class="text-danger mt-2">{{ $message }}</div>
+                @enderror
+            </div>
+
+
+            <!-- Collapse for details -->
+
+            <label class="form-label fs-3">Photos</label>
             @foreach($project->photos as $photo)
-            <div class="col-12 col-md-2" wire:key="$photo->id">
+            <div class="col-12 col-md-2 my-3" wire:key="$photo->id">
                 <div class="card">
                     <img src="{{Storage::url($photo->thumb_path)}}" class="img-fluid image-dimension" />
                     <div class="card-body d-flex justify-content-center">
@@ -41,53 +85,6 @@
                 </div>
             </div>
             @endforeach
-
-            <!-- Collapse for details -->
-
-            <div class="card card-body">
-                <div class="col-12 col-md-6">
-                    <div class="mb-5">
-                        <label class="form-label fs-3 mt-3">Titolo del progetto</label>
-                        <input wire:model="name" type="text" class="form-control @error('name') is-invalid @enderror">
-                        @error('name')
-                        <div class="text-danger mt-2">{{ $message }}</div>
-                        @enderror
-                    </div>
-                    <div class="mb-5">
-                        <label class="form-label fs-3 mt-3">Cliente</label>
-                        <input wire:model="client" type="text"
-                            class="form-control @error('client') is-invalid @enderror">
-                        @error('client')
-                        <div class="text-danger mt-2">{{ $message }}</div>
-                        @enderror
-                    </div>
-                    <div class="mb-5">
-                        <label class="form-label fs-3 mt-3">Inserzione su</label>
-                        <input wire:model="advertorial_on" type="text"
-                            class="form-control @error('advertorialOn') is-invalid @enderror">
-                        @error('advertorialOn')
-                        <div class="text-danger mt-2">{{ $message }}</div>
-                        @enderror
-                    </div>
-                    <div class="mb-5">
-                        <label class="form-label fs-3 mt-3">Anno</label>
-                        <input wire:model="year" type="number" step="1"
-                            class="form-control @error('year') is-invalid @enderror" placeholder="es. 2023">
-                        @error('year')
-                        <div class="text-danger mt-2">{{ $message }}</div>
-                        @enderror
-                    </div>
-                    <div class="mb-5">
-                        <label class="form-label fs-3">Descrizione</label>
-                        <textarea wire:model="description"
-                            class="form-control @error('description') is-invalid @enderror" cols="30"
-                            rows="10"></textarea>
-                        @error('description')
-                        <div class="text-danger mt-2">{{ $message }}</div>
-                        @enderror
-                    </div>
-                </div>
-            </div>
             <!-- fine row -->
         </div>
         <button type="submit" class="btn btn-dark mt-3">Submit</button>

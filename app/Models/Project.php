@@ -14,7 +14,7 @@ class Project extends Model
         'name',
         'description',
         'client',
-        'advertorial on',
+        'advertorial_on',
         'year'
     ];
 

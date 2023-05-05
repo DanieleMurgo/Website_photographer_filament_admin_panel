@@ -15,7 +15,7 @@ class ProjectController extends Controller
      */
     public function index()
     {
-        $projects = Project::orderBy('created_at','desc')->paginate(6);
+        $projects = Project::orderBy('year','desc')->paginate(6);
         return view('project.index', compact('projects'));
     }
 
@@ -85,6 +85,6 @@ class ProjectController extends Controller
         Storage::delete($project->photos);
         $projectName=$project->name;
         $project->delete();
-        return redirect()->route('project.index')->with('message', "Project deleted!");
+        return redirect()->route('admin')->with('message', "Project deleted!");
     }
 }

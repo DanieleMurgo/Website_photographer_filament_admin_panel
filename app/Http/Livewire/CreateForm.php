@@ -66,6 +66,7 @@ class CreateForm extends Component
         $this->project = Project::create([
             'name' => $this->name,
             'description' => $this->description,
+            'client' => $this->client,
             'advertorial_on' => $this->advertorialOn,
             'year' => $this->year
         ]);
