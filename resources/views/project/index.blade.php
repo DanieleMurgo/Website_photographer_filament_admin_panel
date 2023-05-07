@@ -1,7 +1,7 @@
 <x-layout>
     <x-slot name="title">Projects</x-slot>
 
-    <div class="container mt-nav" id="index-pjs-height">
+    <div class="container mt-nav header-min-height">
         <h1>Our Projects</h1>
         <div class="row">
             @foreach ($projects as $project)
@@ -44,7 +44,6 @@
             @endforeach
         </div>
         <div class="d-flex justify-content-center">
-
             {{ $projects->links() }}
         </div>
     </div>

@@ -33,7 +33,12 @@ class ProjectResource extends Resource
                 Forms\Components\TextInput::make('advertorial_on')
                 ->required()
                 ->maxLength(2048),
-                Forms\Components\DatePicker::make('Year')->displayFormat('Y'),
+                Forms\Components\TextInput::make('year')
+                ->numeric()
+                ->integer()
+                ->length(4)
+                ->minValue(2000)
+                ->maxValue(2050),
                 Forms\Components\TextArea::make('description')
                 ->minLength(20)
                 ->maxLength(4096)

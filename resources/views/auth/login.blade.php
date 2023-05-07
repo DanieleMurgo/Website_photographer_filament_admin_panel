@@ -1,8 +1,8 @@
 <x-layout>
     <x-slot name="title">Login</x-slot>
     <section>
-        <div class="container mt-nav">
-        <h2 class="text-center">Login</h2>
+        <div class="container mt-nav header-min-height">
+            <h2 class="text-center">Login</h2>
             <div class="row justify-content-center">
                 <div class="col-12 col-md-6">
                     <form method="POST" action="{{route('login')}}">

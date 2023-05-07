@@ -26,7 +26,7 @@ class PhotosRelationManager extends RelationManager
             ->schema([                
                 FileUpload::make('path')
                     ->directory(function (RelationManager $livewire): string {
-                        return "\projects\{$livewire->ownerRecord->id}"
+                        return "/projects/{$livewire->ownerRecord->id}"
                             ;})
                     ->visibility('private')
                     ->image()
@@ -36,18 +36,19 @@ class PhotosRelationManager extends RelationManager
                     ->preserveFilenames()
                     ->maxSize(4096)
                     ->label('Image'),
-            ]);
-    }
-
-    public static function table(Table $table): Table
-    {
-        return $table
-            ->columns([
-                Tables\Columns\ImageColumn::make('path')
-                ->square()
-                ->label('Image'),
-                // Tables\Columns\TextColumn::make('path')
-                // ->label('Path'),
+                ]);
+            }
+            
+            public static function table(Table $table): Table
+            {
+                return $table
+                ->columns([
+                    Tables\Columns\TextColumn::make('sort')->sortable(),
+                    Tables\Columns\ImageColumn::make('path')
+                    ->square()
+                    ->label('Image'),
+                    // Tables\Columns\TextColumn::make('path')
+                    // ->label('Path'),
 
                 
             ])
@@ -65,7 +66,9 @@ class PhotosRelationManager extends RelationManager
                 ,
             ])
             ->bulkActions([
-                Tables\Actions\DeleteBulkAction::make(),
-            ]);
+                Tables\Actions\BulkAction::make('delete')
+                ->action(fn (Collection $records) => $records->each->delete())
+            ])
+            ->reorderable('sort');
     }    
 }

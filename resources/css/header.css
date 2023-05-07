@@ -5,3 +5,7 @@ header {
 .zindex-toast {
     z-index: 1090;
 }
+
+.header-min-height {
+    min-height: 100vh ;
+}

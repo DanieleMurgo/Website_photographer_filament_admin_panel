@@ -17,7 +17,8 @@ class Photo extends Model
     protected $fillable = [
         'path',
         'thumb_path',
-        'project_id'
+        'project_id',
+        'sort'
     ];
 
     public function project()

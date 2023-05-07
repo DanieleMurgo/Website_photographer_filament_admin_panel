@@ -1,6 +1,6 @@
 <x-layout>
     <section class="mt-nav">
-        <div class="container">
+        <div class="container header-min-height">
             <div class="row">
                 <div class="col-12">
                     <h2>Admin</h2>
@@ -22,12 +22,20 @@
                         <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel"
                             aria-labelledby="home-tab" tabindex="0">
                             <x-admin-projects-table :projects="$projects" />
+
+                            <div class="d-flex justify-content-center">
+                                {{ $projects->links() }}
+                            </div>
                         </div>
 
-<!-- Tab workers contenuto -->
+                        <!-- Tab workers contenuto -->
                         <div class="tab-pane fade" id="workers-tab-pane" role="tabpanel" aria-labelledby="home-tab"
                             tabindex="0">
                             <x-admin-workers-table :workers="$workers" />
+
+                            <div class="d-flex justify-content-center">
+                                {{ $workers->links() }}
+                            </div>
                         </div>
                     </div>
                 </div>

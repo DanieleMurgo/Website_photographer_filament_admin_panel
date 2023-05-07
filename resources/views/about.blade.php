@@ -5,7 +5,8 @@
         <div class="container mt-nav">
             <div class="row">
                 <div class="col-12">
-                    <video src="/videos/Cadmea_2022_Fattura.mp4" type="video/mp4" controls class="about-vid"></video>
+                    <video src="/videos/Cadmea_2022_Fattura.mp4" type="video/mp4" controls class="about-vid"
+                        autoplay></video>
                 </div>
             </div>
             <div class="row mt-5">
